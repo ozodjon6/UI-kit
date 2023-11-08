@@ -1,0 +1,121 @@
+/** @format */
+
+.main-page {
+  padding: 24px;
+}
+
+.ui-wrapper {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  .ui-wrapper__link {
+    color: var(--link-primary-colour);
+    text-decoration: underline;
+    font-size: 24px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/// Checkbox
+
+.main-page.checkbox {
+  .registration-wrap__label {
+    margin: 0;
+    max-width: max-content;
+  }
+
+  .registration-wrap__mask {
+    &::before {
+      display: none;
+    }
+  }
+
+  .registration-wrap__text {
+    color: var(--text-primary-colour);
+  }
+
+  .registration-wrap__mask {
+    box-shadow: inset 0px 0px 0px 1px var(--input-color-input-border-active);
+    background-color: var(--input-color-input-bg-normal);
+    position: relative;
+
+    .check-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      color: var(--color-icon-primary);
+    }
+  }
+
+  .registration-wrap__field input:checked:hover + .registration-wrap__mask {
+    box-shadow: inset 0px 0px 0px 2px var(--neutral-100);
+  }
+
+  .registration-wrap__field
+    input:checked:hover
+    + .registration-wrap__mask.active {
+    box-shadow: inset 0px 0px 0px 1px var(--neutral-100);
+  }
+
+  .registration-wrap__field input:checked + .registration-wrap__mask.error {
+    box-shadow: inset 0px 0px 0px 2px var(--system-color-system-error);
+    background-color: var(--system-color-system-error-dimmed);
+  }
+
+  .registration-wrap__field input:checked + .registration-wrap__mask {
+    background-color: var(--input-color-input-bg-normal);
+    box-shadow: inset 0px 0px 0px 1px var(--input-color-input-border-active);
+  }
+
+  .registration-wrap__field input:checked + .registration-wrap__mask.active {
+    background-color: var(--brand-brand-primary-colour);
+    box-shadow: none;
+  }
+
+  .registration-wrap__field input:checked:disabled + .registration-wrap__mask {
+    background-color: var(--neutral-20);
+    box-shadow: none;
+  }
+
+  .registration-wrap__field
+    input:checked:disabled
+    + .registration-wrap__mask
+    ~ .registration-wrap__text {
+    color: var(--text-secondary-colour);
+  }
+
+  .registration-wrap__field
+    input:checked:disabled
+    + .registration-wrap__mask
+    .check-icon {
+    color: var(--neutral-100);
+  }
+
+  .registration-wrap__field
+    input:checked
+    + .registration-wrap__mask.active
+    .check-icon {
+    color: var(--icons-primary-inverted-colour);
+  }
+
+  .registration-wrap__field
+    input:checked
+    + .registration-wrap__mask
+    .check-icon {
+    opacity: 1;
+  }
+}
+
+.checkbox__item {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}

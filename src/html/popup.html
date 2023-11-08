@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web app | Home Page</title>
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <div id="root">
+        <div class="wrapper">
+            <div class="main-app">
+                <main class="main-page">
+                    <div class="row">
+                        <div class="col-6 mb-4">@@include('blocks/registration-form.html')</div>
+                        <div class="col-6 mb-4">@@include('blocks/registration-form-icon.html')</div>
+                        <div class="col-6 mb-4">@@include('blocks/success-completed.html')</div>
+                        <div class="col-6 mb-4">@@include('blocks/success-done.html')</div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="overlay open"></div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
